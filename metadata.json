@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "KPlugin": {
+        "Id": "mouse-follows-focus",
+        "Name": "Mouse Follows Focus",
+        "Description": "Warps the pointer to a window when it gains focus (uses KWin's Move Mouse to Focus action)",
+        "Authors": [
+            {
+                "Name": "Mostafa Shirvani",
+                "Email": "MostafaShirvani1377@outlook.com"
+            }
+        ],
+        "Category": "Window Management",
+        "EnabledByDefault": true,
+        "License": "MIT",
+        "Version": "1.0"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
