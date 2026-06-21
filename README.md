@@ -50,18 +50,31 @@ actual pointer move uses KWin's own code path.
 
 ## Install
 
+### From the GUI (no terminal)
+
+1. Open **System Settings → Window Management → KWin Scripts**.
+2. Click **Install from File…** and pick `mouse-follows-focus.kwinscript` (shipped in this
+   repo).
+3. Make sure **Mouse Follows Focus** is checked, then **Apply**.
+
+### From the command line
+
 ```bash
 ./install.sh
 ```
 
 This installs the package with `kpackagetool6`, enables it, and loads it into the running
-KWin session. Or install manually:
+KWin session. Or manually:
 
 ```bash
 kpackagetool6 --type KWin/Script --install .
 kwriteconfig6 --file kwinrc --group Plugins --key mouse-follows-focusEnabled true
 # then toggle it in: System Settings -> Window Management -> KWin Scripts
 ```
+
+> **Note on autoloading at boot:** the package metadata declares
+> `"X-Plasma-API": "javascript"`. Without it KWin can install and run the script when loaded
+> manually, but will *not* start it automatically after a reboot.
 
 ## Uninstall
 
